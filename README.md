@@ -27,10 +27,6 @@ Besondere Funktionen:
    ```sh
    pip install gradio openai reportlab cryptography gitpython dotenv markdown
    ```
-3. **Git-Repository initialisieren**
-   ```sh
-   git init
-   ```
 
 ## 🚀 Nutzung
 ### 📌 Start der Anwendung
