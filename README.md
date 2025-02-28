@@ -25,7 +25,7 @@ Besondere Funktionen:
    ```
 2. **Notwendige Pakete installieren**
    ```sh
-   pip install gradio openai fastapi uvicorn matplotlib reportlab cryptography pygit2
+   pip install gradio openai reportlab cryptography gitpython dotenv markdown
    ```
 3. **Git-Repository initialisieren**
    ```sh
