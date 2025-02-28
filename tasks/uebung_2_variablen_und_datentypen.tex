@@ -1,0 +1,78 @@
+\documentclass[fontsize=11pt, parskip=half]{scrartcl}
+
+\input{../tasksbase/tasks.tex}
+
+\usepackage{tabu}
+
+\begin{document}
+ 
+\taskstitle{2}{WS 2024/2025}{Grundlagen der Programmierung}{14. Oktober 2024}
+{\raggedleft\textit{Frist: 1. November 2024}\\}
+
+\task{Datentypen und Wertebereiche}
+Folgender Rumpf eines Programms sei gegeben:
+
+\mintedattached{c}{code/types.c}
+
+\subtask{} Erweitern Sie das Programm so, dass es die Werte aller Variablen auf der Kommandozeile ausgibt und verwenden Sie die passenden Formatspezifikatoren. Geben Sie bei Fließkommazahlen 4 Stellen nach dem Komma aus, bei allen Anderen Werten soll die Ausgabe so wie im Programm dargestellt sein. 
+
+Beispiel: \mintinline{c}{printf("value1 = %d", value1)}
+
+\textit{Hinweis: sollten Sie unter Windows arbeiten und bei großen Typen Fehlermeldungen bekommen, fügen Sie \texttt{\#define \_\_USE\_MINGW\_ANSI\_STDIO 1} am Anfang des Programms ein.}
+% Oktalwerte mit %o darstellbar
+% Bei bool exakte Ausgabe eigentlich hier noch nicht möglich
+
+\subtask{} Verbessen Sie die Ausgabe des Programms weiter und geben zusätzlich zu den zugewiesenen Werten auch noch den belegten Speicherplatz in Byte für jede Variable aus!
+
+\subtask{} Zusätzlich soll noch für jede Variable ihr Wertebereich angegeben werden. \textit{Hinweis: Nutzen sie \href{https://openbook.rheinwerk-verlag.de/c_von_a_bis_z/030_c_anhang_b_009.htm}{\texttt{limits.h}} und \href{https://openbook.rheinwerk-verlag.de/c_von_a_bis_z/030_c_anhang_b_006.htm}{\texttt{float.h}}}.
+
+Beispiel: \mintinline{c}{printf("value1 von %d bis %d", INT_MIN, INT_MAX)}
+
+\subtask{} Abschließend deklarieren Sie noch eine Ganzzahlvariable mit einer garantierten Breite von 16 Bit. \textit{Hinweis: \href{https://openbook.rheinwerk-verlag.de/c_von_a_bis_z/030_c_anhang_b_017.htm}{\texttt{stdint.h}} ist hierfür die richtige Anlaufstelle.}.
+
+\newpage
+
+\task{Fehlersuche}
+In folgendem Programm hat der Fehlerteufel gewütet:
+
+\mintedattachedlines{c}{code/mistakes.c}
+%
+\subtask{} Geben Sie für jede Zeile des Programms an, ob sie Fehler enthält. Geben Sie die Fehler an und begründen Sie in eigenen Worten warum es sich um einen Fehler handelt. Zur Unterstützung können Sie die Fehlermeldungen des Compilers nutzen.
+%
+\subtask{} Korrigieren Sie das Programm so, dass es bei Übersetzung mit \texttt{gcc -Wall -Werror -std=c99} keine Fehler entstehen!
+
+ \newpage
+
+\task{Sichtbarkeit und Gültigkeit}
+Gegeben sei das unten stehende Programm:
+%
+\mintedattached{c}{code/visibility.c}
+%
+\subtask{} Geben Sie für jede Zeile mit einem Label (Kommentar der Form \texttt{/* Label N */}) die dort sichtbaren Variablen und deren jeweiligen Wert und Typ an!
+
+\begin{minipage}{.80\textwidth}%
+    \extrarowsep=4pt
+    \begin{tabu} to 350pt {| X[c] | X[c] | X[c] | X[c] | X[c] |}%
+    \hline
+    \textbf{Label} & \texttt{a} & \texttt{b} & \texttt{c} & \texttt{d}\\
+    \hline
+    \textbf{$1$} & & int, 1 & int, 2 & - \\ %1
+    \hline
+    \textbf{$2$} & & & & \\ %1.5
+    \hline
+    \textbf{$3$} & & & & \\ %1.5
+    \hline
+    \textbf{$4$} & & & & \\ %1.5
+    \hline
+    \textbf{$5$} & & & & \\ %1.5 
+    \hline
+    \textbf{$6$} & & & & \\ %1.5
+    \hline
+    \end{tabu}
+\end{minipage}%     
+
+
+\subtask{} Abschließend können Sie Ihre Lösung mittels \texttt{printf} Anweisungen überprüfen, oder das Programm \href{https://github.com/HOME-programming-pub/LimitCSolver}{\texttt{LimitCSolver}} verwenden! 
+
+\end{document} 
+ 

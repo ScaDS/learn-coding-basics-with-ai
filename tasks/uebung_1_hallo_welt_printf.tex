@@ -1,0 +1,59 @@
+\documentclass[fontsize=11pt, parskip=half]{scrartcl}
+
+\input{../tasksbase/tasks.tex}
+
+\begin{document}
+ 
+\taskstitle{1}{WS 2024/2025}{Grundlagen der Programmierung}{07. Oktober 2024}
+{\raggedleft\textit{Frist: 25. Oktober 2024}\\}
+
+\task{Hallo Welt!}
+%
+\subtask{}
+Legen Sie in Ihrem Nutzer- oder Home-Verzeichnis einen Ordner \texttt{Uebung1} an. Anschließend starten Sie den Editor \textit{Visual Studio Code} und öffnen das angelegte Verzeichnis. Anschließend legen Sie über das Menü \texttt{File > New File} bzw. \texttt{Datei > Neue Datei} eine neue, leere Datei mit dem Namen \texttt{hallo\_welt.c} an. Speichern Sie diese Datei. Nach dem Speichern sollte der Editor die Datei als C-Programmdatei erkannt haben.
+
+\subtask{}
+Geben Sie nun das unten stehende Programm in den Editor ein. Der Editor sollte, wie im Listing, nun verschiedene Abschnitte des Programms farbig darstellen. Mögliche Fehler im Programm werden durch rote Wellenlinien unterstrichen. Der Editor sollte an dieser Stelle keine Fehler anzeigen. 
+\begin{minted}[linenos,xleftmargin=20pt]{c}
+#include <stdio.h>
+
+/**
+ * Dieses Programm gibt einen Gruß an die Welt aus.
+ */
+int main(void)
+{
+    printf("Hallo Welt!\n");
+    return 0;
+}
+\end{minted}
+ 
+\subtask{}
+Erklären Sie die Bedeutung jeder nicht-leeren Zeile des Programms!
+%
+\subtask{}
+Öffnen Sie nun ein Kommandozeilenfenster. Unter \texttt{Visual Studio Code} können Sie das über \texttt{Terminal > New Terminal} erreichen. Sie können jedoch auch eine beliebige andere Kommandozeile verwenden. Anschließend navigieren Sie in den Ordner mit Ihrem erstellten Programm. Dort rufen Sie den den Compiler auf, um das Programm in Maschinencode zu übersetzen:
+%
+\begin{minted}{powershell}
+    gcc -Wall -std=c99 .\hallo_welt.c -o hallo_welt 
+\end{minted}
+%
+Nachdem der Code erfolgreich kompiliert wurde, führen Sie die Anwendung mit dem Kommando \mintinline{powershell}{.\hallo_welt} aus.
+
+\task{Formatierte Ausgabe}
+Gegeben sei folgende Ausgabe:
+\begin{minted}{c}
+    P
+    r
+    i
+    n
+    t
+    f ist t
+          o
+          l
+          l!
+\end{minted}
+Schreiben Sie ein Programm, das diese Ausgabe erzeugt! Verwenden Sie dafür maximal zwei \texttt{printf} Anweisungen.
+
+
+\end{document} 
+ 
