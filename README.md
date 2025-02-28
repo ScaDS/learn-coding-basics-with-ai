@@ -11,7 +11,7 @@ Besondere Funktionen:
 
 ## 🛠 Setup & Installation
 ### 📌 Voraussetzungen
-- Python 3.9+
+- Python 3.10+
 - Git installiert
 - Virtuelle Umgebung (venv)
 - OPENAI_API_KEY in .env 
@@ -40,10 +40,12 @@ Die Anwendung wird auf `http://127.0.0.1:7860` gestartet und kann über den Brow
   - Aufgaben aus einer Dropdown-Liste auswählen.
   - C-Code im Editor schreiben & versionieren.
 - **Automatische Commits & Git-Tracking**
-  - Änderungen werden intelligent erfasst und gespeichert.
-  - Copy-Paste wird erkannt und dokumentiert.
+  - Änderungen werden erfasst und gespeichert.
+  - Copy-Paste wird erkannt und dokumentiert. Ein LLM ändert daraufhin Kleinigkeit(en) am Code
 - **Tutor-Chat**
   - LLM beantwortet Fragen, gibt aber keine Lösungen vor.
+
+### 📌 To Do
 - **Code-Ausführung & Debugging**
   - Kompilierung und Ausführung des Codes in der App.
 - **Berichtserstellung**
