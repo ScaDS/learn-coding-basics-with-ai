@@ -20,11 +20,11 @@ Wir bauen eine Gradio-Webanwendung, die:
     Benötigte Libraries:
         gradio – UI
         openai – LLM
-        fastapi & uvicorn – Backend für WebSocket-Tracking
-        matplotlib – Git-Graph-Visualisierung
+        dotenv - laden von .env für API-Calls und Authentifizierung
         reportlab – PDF-Berichte
         cryptography – Passwortschutz für Berichte
-        pygit2 oder subprocess – Git-Steuerung
+        gitpython oder subprocess – Git-Steuerung
+        markdown - Formatierung in md-Format 
         docker (optional) – Sichere Code-Ausführung
 
 📝 Schritte
@@ -37,11 +37,8 @@ venv\Scripts\activate  # Windows
 
 Notwendige Pakete installieren:
 
-pip install gradio openai fastapi uvicorn matplotlib reportlab cryptography pygit2
+pip install gradio openai reportlab cryptography gitpython dotenv markdown
 
-Git-Setup:
-
-    git init
 
 🔹 2. Benutzer- & Aufgabenstruktur
 📌 Ziel
@@ -132,13 +129,13 @@ Git-Setup:
 🔹 7. Git-Analyse & Berichterstellung
 📌 Ziel
 
-    Git-Graph als Zeitstrahl mit Diffs & Notizen.
+    ? Git-Graph als Zeitstrahl mit Diffs & Notizen.
     Bewertung des Lernfortschritts durch LLM.
     PDF-Bericht mit Passwortschutz speichern.
 
 📌 Umsetzung
 
-    Graph mit matplotlib generieren.
+    ? Graph mit matplotlib generieren.
     LLM-gestützte Code-Analyse:
         Wie viel wurde selbst geschrieben?
         War Copy-Paste dabei?
